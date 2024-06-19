@@ -17,7 +17,7 @@ namespace testNavigation
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //此处要注册各种资源
-            //匿名
+            //默认名为ViewA
             //containerRegistry.RegisterForNavigation<ViewA>();
             //起名方式
             containerRegistry.RegisterForNavigation<ViewA>("PageA");
