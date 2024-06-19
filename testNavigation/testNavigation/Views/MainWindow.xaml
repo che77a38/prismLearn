@@ -1,0 +1,20 @@
+﻿<Window x:Class="testNavigation.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="350" Width="525" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="上一步" Width="auto" Height="auto" Margin="3" Command="{Binding GoBackCommand}"/>
+            <Button Content="下一步" Width="auto" Height="auto" Margin="3" Command="{Binding GoForwordCommand}"/>
+            <Button Content="打开A" Width="auto" Height="auto" Margin="3" Command="{Binding OpenACommand}"/>
+            <Button Content="打开B" Width="auto" Height="auto" Margin="3" Command="{Binding OpenBCommand}"/>
+        </StackPanel>
+        <ContentControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion" />
+    </Grid>
+</Window>
